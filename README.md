@@ -6,7 +6,7 @@ A responsive, feature-rich shopping cart application built as part of an interns
 
 ## 🚀 Live Demo
 
-> Deploy link will be added after deployment (Vercel / Netlify / Cloudflare Pages).
+> Deploy link : https://cartshoppi.netlify.app/
 
 ---
 
@@ -123,22 +123,3 @@ pnpm lint
 ### Zod Schemas
 - `productSchema.ts` – validates the DummyJSON API response before usage
 - `shippingSchema.ts` – validates all shipping form fields with appropriate rules
-
----
-
-## ⚠️ Known Limitations
-
-- No real payment gateway integration (by design, as per assignment spec)
-- No unit tests (would add with Vitest for cart calculation functions with more time)
-- No pagination — fetches all 100 products at once from DummyJSON
-
----
-
-## 🔮 What I Would Improve With More Time
-
-- Add unit tests for cart calculation functions using Vitest
-- Implement infinite scroll or pagination for products
-- Add product search by tags and brand
-- Persist shipping form data in session storage for multi-tab UX
-- Add toast notifications for cart actions
-- Improve mobile layout for the checkout grid
