@@ -129,7 +129,6 @@ pnpm lint
 ## ⚠️ Known Limitations
 
 - No real payment gateway integration (by design, as per assignment spec)
-- Prices are converted to INR display (₹) from USD source data
 - No unit tests (would add with Vitest for cart calculation functions with more time)
 - No pagination — fetches all 100 products at once from DummyJSON
 

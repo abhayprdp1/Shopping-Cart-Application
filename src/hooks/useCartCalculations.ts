@@ -16,10 +16,12 @@ export function useCartCalculations(): CartCalculations {
       (sum, i) => sum + i.product.price * i.quantity,
       0
     );
+    // Per PDF spec: "Tax is 5% of the subtotal"
+    const tax = subtotal * TAX_RATE;
+    // 10% discount when subtotal > $100
     const discount = subtotal > DISCOUNT_THRESHOLD ? subtotal * DISCOUNT_RATE : 0;
-    const taxable = subtotal - discount;
-    const tax = taxable * TAX_RATE;
-    const total = taxable + tax;
+    // Final total = subtotal + tax - discount
+    const total = subtotal + tax - discount;
 
     return {
       subtotal: parseFloat(subtotal.toFixed(2)),
