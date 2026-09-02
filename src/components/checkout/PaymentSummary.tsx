@@ -168,7 +168,7 @@ export function PaymentSummary({ shippingData, onBack, onSuccess }: PaymentSumma
             ...(discount > 0
               ? [{ label: '🎉 Discount (10%)', value: `−${formatINR(discount)}`, color: 'var(--success)' }]
               : []),
-            { label: 'GST (5%)', value: formatINR(tax), color: 'var(--text-secondary)' },
+            { label: 'Tax (5%)', value: formatINR(tax), color: 'var(--text-secondary)' },
             { label: '🚚 Delivery', value: 'FREE', color: 'var(--success)' },
           ].map(({ label, value, color }) => (
             <div

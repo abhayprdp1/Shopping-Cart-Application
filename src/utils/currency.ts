@@ -1,22 +1,19 @@
-/** 1 USD → INR conversion rate */
-const USD_TO_INR = 84.5;
-
 /**
- * Convert USD price to INR and format as ₹XX,XX,XXX
+ * Format a USD price as a dollar string, e.g. $24.99
+ * The DummyJSON API provides prices in USD as per the assignment spec.
  */
-export function formatINR(usdPrice: number): string {
-  const inr = usdPrice * USD_TO_INR;
-  return new Intl.NumberFormat('en-IN', {
+export function formatINR(price: number): string {
+  return new Intl.NumberFormat('en-US', {
     style: 'currency',
-    currency: 'INR',
-    maximumFractionDigits: 0,
-    minimumFractionDigits: 0,
-  }).format(Math.round(inr));
+    currency: 'USD',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(price);
 }
 
 /**
- * Convert USD to INR number
+ * Return the price as a plain number (no conversion needed — already USD).
  */
-export function toINR(usdPrice: number): number {
-  return Math.round(usdPrice * USD_TO_INR);
+export function toINR(price: number): number {
+  return price;
 }

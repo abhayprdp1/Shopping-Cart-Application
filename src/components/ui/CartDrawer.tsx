@@ -273,7 +273,7 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                 ...(discount > 0
                   ? [{ label: '🎉 10% Discount', value: `−${formatINR(discount)}`, color: 'var(--success)' }]
                   : []),
-                { label: 'GST (5%)', value: formatINR(tax), color: 'var(--text-secondary)' },
+                { label: 'Tax (5%)', value: formatINR(tax), color: 'var(--text-secondary)' },
               ].map(({ label, value, color }) => (
                 <div
                   key={label}

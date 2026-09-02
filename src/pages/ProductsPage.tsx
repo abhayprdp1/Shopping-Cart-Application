@@ -163,7 +163,7 @@ export function ProductsPage() {
           </h1>
           <p style={{ fontSize: 15, color: 'var(--text-secondary)', lineHeight: 1.5 }}>
             {products
-              ? <>{products.length} curated products · Prices in <strong style={{ color: 'var(--accent-2)' }}>₹ INR</strong></>
+              ? <>{products.length} curated products · Prices in <strong style={{ color: 'var(--accent-2)' }}>USD $</strong></>
               : 'Shop curated products at great prices'}
           </p>
         </div>
@@ -261,7 +261,7 @@ export function ProductsPage() {
             </FilterBtn>
             {priceDrop.open && (
               <DropPanel minWidth={280}>
-                <p style={{ fontSize: 11, fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 14 }}>Price Range (INR)</p>
+                <p style={{ fontSize: 11, fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 14 }}>Price Range (USD)</p>
                 {/* Min / Max display */}
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 10, fontSize: 13 }}>
                   <div style={{ background: 'var(--bg-elevated)', padding: '5px 10px', borderRadius: 7, fontWeight: 600, color: 'var(--text-primary)' }}>
